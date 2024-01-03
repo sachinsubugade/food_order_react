@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
   res.send("Hey this is my API running 🥳");
 });
 
+app.get("/testing", (req, res) => {
+  res.send("Hi, Sachin!😎");
+});
+
 app.get("/meals", async (req, res) => {
   const meals = await fs.readFile("./data/available-meals.json", "utf8");
   res.json(JSON.parse(meals));
